@@ -28,9 +28,10 @@ class DataSearch extends SearchDelegate<String> {
       },
     );
   }
-
+ 
   @override
   Widget buildResults(BuildContext context) {
+    Future.delayed(Duration.zero).then((_)=>close(context, query));
     return Container();
   }
 
